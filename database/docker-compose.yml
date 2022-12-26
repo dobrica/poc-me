@@ -1,0 +1,17 @@
+services:
+  neo4j:
+    container_name: mbdb
+    image: neo4j:4.2.1
+    environment:
+      - NEO4J_AUTH=none
+    ports:
+      - 7474:7474
+      - 7687:7687
+    volumes:
+      - data:mbdb-n4j/data
+      - import:mbdb-n4j/import 
+volumes:
+  data:
+    external: true
+  import:
+    external: true

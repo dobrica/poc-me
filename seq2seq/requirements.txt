@@ -1,0 +1,7 @@
+neo4j
+matplotlib
+tensorflow
+tensorflow-datasets
+tensorflow-text
+SpeechRecognition
+pyaudio

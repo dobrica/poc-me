@@ -1,0 +1,6 @@
+Commands:
+  - clear (-c) - clears the screen
+  - questions (-q) - shows template questions
+  - musicbrainz (-m) - allows for voice search
+  - help (-h) - shows info about available commands
+  - exit (-e) - terminate execution

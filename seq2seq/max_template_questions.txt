@@ -1,0 +1,8 @@
+CYPHER MATCH (var1: Artist{name: '<Artist>'})-[:IS_FROM]-(var2: Area) RETURN var2 ENGLISH Where is <Artist> from? END	
+CYPHER MATCH (var1: Artist{name: '<Artist>'})-[:BELONGS_TO]-(var2: Genre) RETURN var2 ENGLISH Which genre <Artist> belongs to? END	
+CYPHER MATCH (var1: Artist{name: '<Artist>'})-[:PLAYS]-(var2: Instrument) RETURN var2 ENGLISH Which instruments <Artist> plays? END	
+CYPHER MATCH (var1: Artist{name: '<Artist>'})-[:HELD]-(var2: Event) RETURN var2 ENGLISH Show me all events that <Artist> held? END	
+CYPHER MATCH (var1: Artist{name: '<Artist>'})-[:RELATED]-(var2: Artist)-[:IS_OF_A]-(:ArtistType {name: 'Person'}) RETURN var2 ENGLISH Show me members of <Artist>? END	
+CYPHER MATCH (var1: Artist{name: '<Artist>'})-[:RELATED]-(var2: Artist)-[:IS_OF_A]-(:ArtistType {name: 'Group'}) RETURN var2 ENGLISH Show me tribute bands of <Artist>? END	
+CYPHER MATCH (var1: ReleaseGroup {name: '<Album>'})-[:RELEASED]-(var2:Artist) RETURN var2 ENGLISH Who released <Album>? END	
+CYPHER MATCH (var1: Track{name: '<Track>'})-[:IS_ON]-(:PhysicalCopy)-[:OF]-(var2:Release) RETURN var2 ENGLISH Which album has <Track>? END	
